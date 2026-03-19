@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Certificados</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <div class="icon">📜</div>
+                <h1>Consulta tu Certificado</h1>
+                <p class="subtitle">Sistema de verificación de certificados digitales</p>
+            </div>
+
+            <div class="search-section">
+                <div class="input-group">
+                    <label for="cedulaInput">Número de Cédula</label>
+                    <input 
+                        type="text" 
+                        id="cedulaInput" 
+                        placeholder="Ingresa tu número de cédula"
+                        maxlength="15"
+                        autocomplete="off"
+                    >
+                    <span class="input-hint">Solo números, sin espacios ni guiones</span>
+                </div>
+                
+                <button id="btnBuscar" onclick="buscarCertificado()">
+                    <span class="btn-text">Buscar Certificado</span>
+                    <span class="btn-icon">🔍</span>
+                </button>
+            </div>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Buscando en la base de datos...</p>
+            </div>
+
+            <div id="resultado" class="resultado hidden"></div>
+        </div>
+
+        <footer>
+            <p>Sistema de Certificados © 2024</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
